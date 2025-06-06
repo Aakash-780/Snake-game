@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("images/Green World Snake Day Instagram Post.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0f0f0f;
+}
+
+.game-board {
+    display: grid;
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 800px;
+    max-height: 800px;
+    grid-template-rows: repeat(40, 1fr);
+    grid-template-columns: repeat(40, 1fr);
+    background-color: black;
+    border: 2px solid green;
+}
+
+.reset, .score {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 2px solid green;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.score{
+    margin-bottom: 10px;
+}
