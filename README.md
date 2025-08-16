@@ -5,6 +5,11 @@ This game includes **sound effects**, a **live score tracker**, and **responsive
 
 ---
 
+## 🚀 Live Demo  
+🔗 [Play the Snake Game here](https://magenta-khapse-bf2cd6.netlify.app/)
+
+---
+
 ## 🎮 Features
 
 - 🥗 Eat food and grow the snake  
@@ -35,3 +40,19 @@ Can you beat my high score?
 Fork this repo, run the game, and see if you can beat it!
 
 ---
+
+## 📸 Screenshots  
+(Add screenshots here if available, e.g., `![screenshot](path-to-image.png)`)
+
+---
+
+## 🤝 Contributing  
+
+Feel free to **explore, customize, and improve** this project.  
+Pull requests and feedback are always welcome. 🚀  
+
+---
+
+## 📜 License  
+
+This project is open-source and available under the **MIT License**.  
