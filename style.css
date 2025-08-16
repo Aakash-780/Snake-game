@@ -6,45 +6,82 @@
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
-    background-image: url("images/Green World Snake Day Instagram Post.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #0f0f0f;
+    font-family: 'Courier New', monospace;
+    background: radial-gradient(circle at center, #0f0f0f, #000);
+    color: #00ff88;
+    overflow: hidden;
 }
 
+/* Layout for game + controls */
+.game-container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* space between game and controls */
+}
+
+/* Game board */
 .game-board {
-    display: grid;
     width: 90vmin;
     height: 90vmin;
     max-width: 800px;
     max-height: 800px;
-    grid-template-rows: repeat(40, 1fr);
-    grid-template-columns: repeat(40, 1fr);
-    background-color: black;
-    border: 2px solid green;
+    background-color: #111;
+    border: 3px solid #00ff88;
+    box-shadow: 0 0 25px #00ff88, inset 0 0 15px #00ff88;
+    border-radius: 12px;
+    animation: glow 2s infinite alternate;
 }
 
-.reset, .score {
+@keyframes glow {
+    from { box-shadow: 0 0 15px #00ff88, inset 0 0 10px #00ff88; }
+    to   { box-shadow: 0 0 30px #00ffaa, inset 0 0 20px #00ffaa; }
+}
+
+/* Controls (score + reset) */
+.controls {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Score */
+.score {
+    padding: 12px 25px;
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
-    background-color: black;
-    border: 2px solid green;
-    cursor: pointer;
-    border-radius: 8px;
+    color: #00ff88;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff88;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-.score{
-    margin-bottom: 10px;
+/* Reset Button */
+.reset {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    background: linear-gradient(90deg, #00ff88, #00ffaa);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 0 15px #00ff88;
+    transition: all 0.3s ease-in-out;
+}
+
+.reset:hover {
+    background: linear-gradient(90deg, #00ffaa, #00ff88);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00ffaa, 0 0 40px #00ff88;
+}
+
+.reset:active {
+    transform: scale(0.95);
 }
